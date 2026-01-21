@@ -115,23 +115,6 @@ The program generates:
 - **Diagonal Line**: Use for angled conveyors to improve accuracy
 - **Area Thresholds**: Adjust MIN_AREA and MAX_AREA based on bag size
 
-## Troubleshooting
-
-**Too many counts (false positives)**
-- Increase `MIN_AREA` to filter small noise
-- Reduce `LINE_LENGTH_RATIO` to narrow counting area
-- Shorten time window in `check_line_crossing()` (frame_diff < 10)
-
-**Bags not counted (false negatives)**
-- Decrease `MIN_AREA`
-- Increase `MAX_AREA`
-- Check `ROI` covers entire conveyor
-- Adjust morphological kernel sizes in `get_centroids()`
-
-**Inconsistent detection**
-- Improve lighting consistency
-- Use diagonal line instead of horizontal
-- Increase background subtractor history parameter
 
 ## File Structure
 
